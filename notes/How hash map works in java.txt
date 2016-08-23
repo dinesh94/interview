@@ -1,0 +1,18 @@
+https://youtu.be/c3RVW3KGIIE?list=PLWo9hEloTf26TuJqDMKL1R71NSJrHy8nY
+
+static Entry<K, V> implements Map.Entry<K, V> {
+	K key;
+	V value;
+	Entry<K, V,> next;
+	int hash;
+}
+
+Refer the Image :- hash_map_store.JPG
+Entries are store in a table(array of size 16 initially)
+
+put entry 
+1. get the key & compute hash
+2. compute index using modulo - (hash & n-1)
+3. Put entry in the calculated index
+
+In case of override :- public V put(K k, V v) ---> This will return last value assigned to that key. 

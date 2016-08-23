@@ -1,0 +1,118 @@
+<aop:config>
+	<aop:aspect id >
+	<aop:pointcut id & expresion>
+	<aop:arround pointcut-ref & method >
+</aop:config>	
+
+Collections.unmodifiableList 
+Collections.unmodifiableSet
+Collections.unmodifiableMap 
+(More :- http://javarevisited.blogspot.in/2012/07/create-read-only-list-map-set-example-java.html)
+
+Important - Java Volatile (Read from main memory)
+When is volatile Enough?
+As I have mentioned earlier, if two threads are both reading and writing to a shared variable, then using the volatile keyword for that is not enough. You need to use a synchronized in that case to guarantee that the reading and writing of the variable is atomic. Reading or writing a volatile variable does not block threads reading or writing. For this to happen you must use the synchronized keyword around critical sections.
+
+As an alternative to a synchronized block you could also use one of the many atomic data types found in the java.util.concurrent package. For instance, the AtomicLong or AtomicReference or one of the others.
+
+In case only one thread reads and writes the value of a volatile variable and other threads only read the variable, then the reading threads are guaranteed to see the latest value written to the volatile variable. Without making the variable volatile, this would not be guaranteed.
+
+The volatile keyword is guaranteed to work on 32 bit and 64 variables.
+
+Performance Considerations of volatile
+Reading and writing of volatile variables causes the variable to be read or written to main memory. Reading from and writing to main memory is more expensive than accessing the CPU cache. Accessing volatile variables also prevent instruction reordering which is a normal performance enhancement technique. Thus, you should only use volatile variables when you really need to enforce visibility of variables.
+(More :- http://tutorials.jenkov.com/java-concurrency/volatile.html)
+
+http://javarevisited.blogspot.in/2011/04/top-20-core-java-interview-questions.html
+
+AOP
+Design Patterns :-
+Singltone
+Factory - interface e.g. logger
+Prototype - clone
+MVC -
+Adaptor - abstact class
+Observer - 
+Proxy - One class controls the creation of and access to objects in another class
+Injecting dependencies (DI)
+
+Tech. 
+
+generic -  introduced to enforce type-safety 
+
+Core 1.5 
+1.5 feature - http://www.slideshare.net/mohanbang/java-15-features
+			  http://www.developerfusion.com/article/84353/new-features-in-java-15/
+	annottion 
+	Typesafe enum - http://javarevisited.blogspot.in/2011/08/enum-in-java-example-tutorial.html
+	generic - type safty <? extends A> , <? super A>, <?>
+	autoboxing - premative vs non-premative
+	Iterator
+	Enhanced for Loop
+	Formatter
+	Scanner
+	static imports
+	
+
+final keyword - http://www.javatpoint.com/final-keyword
+
+strictfp same result in diff. platform - http://www.javatpoint.com/strictfp-keyword
+
+overloading with exception - http://www.javatpoint.com/exception-handling-with-method-overriding
+
+parent child relation 
+Checked & unChecked exception - http://www.javatpoint.com/exception-handling-and-checked-and-unchecked-exception
+
+Spring module & Hibernate
+
+JQuery json 
+theeam of project
+
+exaplain project both technical & functional
+
+hibernet configuration
+
+abstract & intrface 
+
+how hash map works in java - map.entry [linked list]
+
+immutable no synchronizhation needed
+
+concerrent hash map
+
+design patterns
+singleton + clone 
+ - .clone
+
+jsp & servlet 
+
+threading wait & sleep 
+
+wait notify notify all
+
+demon thread e.g garbage collector
+it dont have its life cycle 
+
+deadlock & how to avoid it
+
+thrad pool , sting pool
+
+transient variable - serializhation
+
+hibernet
+load vs get
+4 interfaces in hbm
+l1 & l2 cash
+dialect
+
+strictfb - delimeter after floating point
+
+JPA 
+
+context bean factory 
+
+bean lifecycle 
+
+DI &Inversion of controle 
+
+implement stack , queue or list
